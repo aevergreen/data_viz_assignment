@@ -1,0 +1,96 @@
+<head>
+  <title>Graph2d or Basic Example</title>
+
+
+  <script src="vis.js"></script>
+      <!-- Bootstrap Core CSS -->
+    <link href="bootstrap.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+<div class="container">
+  {{> activity_controls}}
+</div>  
+
+
+</body>
+
+
+
+<template name="activity_controls">
+<div class="row">
+  <div class="col-md-6">
+
+
+    <h1 align="center">WELCOME TO MY DAILY ACTIVITIES FOR MY CAT</h1>
+      {{> activity_viz_controls}}
+
+  </div>
+  <div class="col-md-6" >
+      {{> activity_vizjs}}
+  </div>
+</div>
+
+</template>
+
+<template name="activity_viz_controls">
+  <form>
+    <div align="center">
+    <!-- list of available single features -->
+    Please choose from 3 options below:
+    <br/>
+    
+    <button class="btn js-show-network">Network</button>
+    <button class="btn js-show-scatter">Scatter Plot</button>
+    <button class="btn js-show-bar">Bar Graph</button>
+    </div>
+  </form>
+
+<div> 
+  <h2>The Following activities are graphed:</h2>
+</div>
+
+<h3>Eating @ 8.3% of the day for a total of 2 hours</h3>
+  <div class="progress progress-striped active">
+  <div class="progress-bar progress-bar-info" style="width: 8.3%"></div>
+</div>
+
+
+<h3>Hangin' Out @ 8.3% of the day for a total of 2 hours</h3>
+<div class="progress progress-striped active">
+  <div class="progress-bar progress-bar-success" style="width: 8.3%"></div>
+</div>
+
+<h3>Playing @ 33.3% of the day for a total of 8 hours</h3>
+<div class="progress progress-striped active">
+  <div class="progress-bar progress-bar-warning" style="width: 33.3%"></div>
+</div>
+
+<h3>Sleeping @ 50% of the day for a total of 12 hours</h3>
+<div class="progress progress-striped active">
+  <div class="progress-bar progress-bar-danger" style="width: 50%"></div>
+</div>
+
+<h3>Total Kitty Day @ 100% of the day for a total of 24 hours</h3>
+  <div class="progress progress-striped active">
+  <div class="progress-bar progress-bar-info" style="width: 100%"></div>
+</div>
+
+</template> 
+
+
+
+<template name="activity_vizjs">
+  <div id="mynetwork"></div>
+  <div id="myscatter"></div>
+  <div id="mytimeline"></div>
+
+</template>
+
+
+
+
